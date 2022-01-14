@@ -1,0 +1,4 @@
+rootProject.name = "MultiModule AndroidApp Example"
+include ':app'
+include ':newmodule1'
+include ':Dyanamicfeature'
