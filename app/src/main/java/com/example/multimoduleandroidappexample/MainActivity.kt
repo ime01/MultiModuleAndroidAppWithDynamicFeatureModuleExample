@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+//import com.example.newmodule1.MainActivity2
 import com.google.android.play.core.splitinstall.SplitInstallManager
 import com.google.android.play.core.splitinstall.SplitInstallManagerFactory
 import com.google.android.play.core.splitinstall.SplitInstallRequest
@@ -104,14 +105,13 @@ class MainActivity : AppCompatActivity() {
         buttonOpenLibraryModule.setOnClickListener {
 
             try {
-               val intent = Intent(this, Class.forName("com.example.newmodule1.MainActivity2"))
+               val intent = Intent().setClassName(applicationContext, "com.example.newlibrarymodule.LibraryModuleActivity")
+               //val intent = Intent(this, MainActivity2::class.java)
                 startActivity(intent)
             } catch (e: ClassNotFoundException) {
                 e.printStackTrace()
             }
 
-           /* val intent = Intent().setClassName(applicationContext, "com.example.newmodule1.MainActivity2")
-            startActivity(intent)*/
 
         }
 
